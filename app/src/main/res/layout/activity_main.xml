@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter your Name (Phone Number)"
+        android:inputType="textPersonName"
+         />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imagess"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/aclonica"
+            android:rotation="-20"
+            android:text="Sale -30%"
+            android:textColor="#CA1616"
+            android:textSize="26sp" />
+
+</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sell Item"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:textSize="16sp"
+        />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="374dp"
+        android:layout_height="299dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:src="@drawable/car" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/priceTitleTextView"
+            android:text="Order Price"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:textSize="22sp"
+            />
+        <TextView
+            android:id="@+id/priceTextView"
+        android:layout_below="@+id/priceTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:textSize="22sp"/>
+        <TextView
+            android:id="@+id/currencyTextView"
+            android:layout_below="@+id/priceTitleTextView"
+            android:layout_toRightOf="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:textSize="22sp"/>
+        <TextView
+            android:id="@+id/quantityTextView"
+            android:layout_toRightOf="@+id/priceTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="110dp"
+            android:textSize="22sp"/>
+        <Button
+            android:layout_width="50dp"
+            android:onClick="decreaseQuantity"
+            android:layout_height="50dp"
+            android:id="@+id/minusButton"
+            android:background="@color/colorPrimaryDark"
+            android:text="-"
+            android:layout_marginStart="210dp"
+            android:layout_below="@+id/quantityTextView"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="5dp"
+            />
+        <TextView
+            android:id="@+id/amountOfQuantityTextView"
+            android:layout_toRightOf="@+id/minusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/quantityTextView"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textSize="22sp"/>
+
+        <Button
+            android:id="@+id/plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/quantityTextView"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/minusButton"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="addOneQuantity"
+            android:text="+"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:onClick="addToCart"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:text="ADD TO CART"
+        android:textColor="@android:color/white"
+        />
+</LinearLayout>
